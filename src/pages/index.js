@@ -1,9 +1,10 @@
 import Page from 'components/Page'
+import Weather from 'components/Weather'
 
 const HomePage = () => {
   return (
     <Page>
-      <h1>Home</h1>
+      <Weather />
     </Page>
   )
 }
