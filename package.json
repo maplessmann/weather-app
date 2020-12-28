@@ -1,0 +1,48 @@
+{
+  "name": "gatsby-boilerplate",
+  "private": false,
+  "description": "A boilerplate to help you create scalable and fast websites",
+  "version": "0.1.0",
+  "author": "Matheus Plessmann",
+  "dependencies": {
+    "gatsby": "^2.28.0",
+    "gatsby-image": "^2.4.9",
+    "gatsby-plugin-google-analytics": "^2.8.0",
+    "gatsby-plugin-layout": "^1.5.0",
+    "gatsby-plugin-manifest": "^2.4.14",
+    "gatsby-plugin-offline": "^3.7.0",
+    "gatsby-plugin-react-helmet": "^3.3.6",
+    "gatsby-plugin-sass": "^2.3.12",
+    "gatsby-plugin-sharp": "^2.6.14",
+    "gatsby-source-filesystem": "^2.3.14",
+    "gatsby-source-graphql": "^2.10.0",
+    "gatsby-transformer-sharp": "^2.5.7",
+    "node-sass": "^4.14.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "prettier": "2.0.5"
+  },
+  "keywords": [
+    "gatsby",
+    "boilerplate"
+  ],
+  "license": "0BSD",
+  "scripts": {
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maplessmann/gatsby-boilerplate"
+  },
+  "homepage": "https://github.com/maplessmann/gatsby-boilerplate#readme",
+  "bugs": {
+    "url": "https://github.com/maplessmann/gatsby-boilerplate/issues"
+  }
+}
