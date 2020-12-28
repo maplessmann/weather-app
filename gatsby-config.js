@@ -33,9 +33,8 @@ const gatsbyPluginSass = {
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Boilerplate`,
-    description: `A boilerplate to help you create scalable and fast websites`,
-    repository: `maplessmann/gatsby-boilerplate`,
+    title: `Weather App`,
+    description: `See the weather of your current location`,
   },
   plugins: [
     gatsbySourceFilesystem,
