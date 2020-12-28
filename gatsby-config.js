@@ -1,7 +1,3 @@
-require('dotenv').config()
-
-const { GITHUB_TOKEN, ANALYTICS_ID } = process.env
-
 const gatsbySourceFilesystem = {
   resolve: `gatsby-source-filesystem`,
   options: {
@@ -35,43 +31,20 @@ const gatsbyPluginSass = {
   },
 }
 
-const gatsbyPluginGoogleAnalytics = ANALYTICS_ID && {
-  resolve: `gatsby-plugin-google-analytics`,
-  options: {
-    trackingId: ANALYTICS_ID,
-    head: false,
-  },
-}
-
-const gatsbySourceGraphql = {
-  resolve: `gatsby-source-graphql`,
-  options: {
-    typeName: `GitHub`,
-    fieldName: `github`,
-    url: `https://api.github.com/graphql`,
-    headers: {
-      Authorization: `Bearer ${GITHUB_TOKEN}`,
-    },
-  },
-}
-
 module.exports = {
   siteMetadata: {
     title: `Gatsby Boilerplate`,
     description: `A boilerplate to help you create scalable and fast websites`,
     repository: `maplessmann/gatsby-boilerplate`,
-    author: `@maplessmann`,
   },
   plugins: [
     gatsbySourceFilesystem,
-    gatsbySourceGraphql,
     gatsbyPluginManifest,
     gatsbyPluginSass,
-    gatsbyPluginGoogleAnalytics,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-layout`,
     `gatsby-transformer-sharp`,
-  ].filter(plugin => !!plugin),
+  ],
 }
