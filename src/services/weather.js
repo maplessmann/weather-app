@@ -7,6 +7,7 @@ const getWeather = ({ coords }) => {
     params: {
       lat: latitude.toFixed(2),
       lon: longitude.toFixed(2),
+      units: 'metric',
       appid: process.env.API_KEY,
     },
   }).then(({ data }) => data)

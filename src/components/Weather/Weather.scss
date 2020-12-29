@@ -1,0 +1,56 @@
+.weather-display {
+  text-align: center;
+
+  > .header {
+    > .city {
+      margin: 0;
+    }
+
+    > .description {
+      margin: 0;
+      padding-top: 1rem;
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: var(--color-text-secondary);
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  > .temperature-info {
+    padding-top: 5rem;
+
+    > .value {
+      display: block;
+      transform: translateX(10px);
+      font-size: 6rem;
+      line-height: 1;
+      letter-spacing: 0.2rem;
+    }
+
+    > .variation {
+      padding-top: 0.2rem;
+      color: var(--color-text-secondary);
+    }
+  }
+
+  > .additional-info {
+    padding-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include above(m) {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    > .info > .label {
+      display: block;
+      padding-bottom: 0.5rem;
+      font-size: .8rem;
+      color: var(--color-text-secondary);
+    }
+  }
+}
