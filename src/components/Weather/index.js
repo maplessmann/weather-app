@@ -46,7 +46,7 @@ const Weather = () => {
       </header>
       <Temperature weather={weather} />
       <Additional weather={weather} />
-      <Button onClick={onUpdateData}>Update infos</Button>
+      <Button onClick={onUpdateData}>Update data</Button>
     </div>
   )
 }

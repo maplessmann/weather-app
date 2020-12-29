@@ -1,5 +1,12 @@
 .weather-display {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+
+  @include above(m) {
+    justify-content: center;
+  }
 
   > .header {
     > .city {
@@ -20,12 +27,12 @@
   }
 
   > .temperature-info {
-    padding-top: 5rem;
+    padding-top: 4rem;
 
     > .value {
       display: block;
       transform: translateX(10px);
-      font-size: 6rem;
+      font-size: 7rem;
       line-height: 1;
       letter-spacing: 0.2rem;
     }
@@ -37,20 +44,30 @@
   }
 
   > .additional-info {
-    padding-top: 4rem;
+    padding: 4rem 1rem 0;
     display: flex;
     justify-content: space-between;
+    max-width: 19rem;
 
     @include above(m) {
-      max-width: 300px;
       margin: 0 auto;
+      width: 100%;
     }
 
     > .info > .label {
       display: block;
       padding-bottom: 0.5rem;
-      font-size: .8rem;
+      font-size: 0.8rem;
       color: var(--color-text-secondary);
+    }
+  }
+
+  > .button {
+    margin-top: auto;
+    align-self: center;
+
+    @include above(m) {
+      margin-top: 6rem;
     }
   }
 }
