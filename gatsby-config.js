@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 const gatsbySourceFilesystem = {
   resolve: `gatsby-source-filesystem`,
   options: {
