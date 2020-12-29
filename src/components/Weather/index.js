@@ -1,3 +1,4 @@
+import Button from 'components/Button'
 import useWeather from 'hooks/useWeather'
 
 import './Weather.scss'
@@ -35,7 +36,7 @@ const Additional = ({ weather }) => (
 )
 
 const Weather = () => {
-  const { weather } = useWeather()
+  const { weather, onUpdateData } = useWeather()
 
   return (
     <div className="weather-display">
@@ -45,6 +46,7 @@ const Weather = () => {
       </header>
       <Temperature weather={weather} />
       <Additional weather={weather} />
+      <Button onClick={onUpdateData}>Update infos</Button>
     </div>
   )
 }
