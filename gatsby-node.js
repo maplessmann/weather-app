@@ -15,6 +15,7 @@ exports.onCreateWebpackConfig = ({ actions, plugins }) => {
         images: path.resolve(__dirname, 'src/images'),
         services: path.resolve(__dirname, 'src/services/index.js'),
         styles: path.resolve(__dirname, 'src/styles'),
+        utils: path.resolve(__dirname, 'src/utils'),
       },
     },
   })

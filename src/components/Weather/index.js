@@ -1,13 +1,9 @@
 import Button from 'components/Button'
 import SplashScreen from 'components/SplashScreen'
 import useWeather from 'hooks/useWeather'
+import formatter from 'utils/formatter'
 
 import './Weather.scss'
-
-const formatter = {
-  temp: val => `${~~Math.round(val)}º`,
-  wind: val => `${~~Math.round(val * 3.6)} km/h`,
-}
 
 const Header = ({ weather }) => (
   <header className="header">
