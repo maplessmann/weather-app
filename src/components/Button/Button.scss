@@ -4,12 +4,21 @@
   width: 100%;
   appearance: none;
   border: initial;
-  border-radius: 1rem;
+  border-radius: 3rem;
   background-color: var(--color-bg-button);
   font-weight: 700;
   font-size: 1rem;
   text-align: center;
   color: var(--color-primary);
+  transition: transform .44s ease, box-shadow .44s ease;
+  cursor: pointer;
+  outline: 0;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 20px -2px rgba(21, 25, 36, 0.5);
+    transform: translateY(-4px);
+  }
 
   @include above(m) {
     max-width: 200px;
