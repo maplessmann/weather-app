@@ -2,6 +2,7 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   text-align: center;
 
   @include above(m) {
@@ -9,19 +10,39 @@
   }
 
   > .header {
-    > .city {
-      margin: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+
+    > .location {
+      > .city {
+        margin: 0;
+      }
+
+      > .description {
+        margin: 0;
+        padding-top: 0.5rem;
+        font-weight: 400;
+        font-size: 1.1rem;
+        color: var(--color-text-secondary);
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
     }
 
-    > .description {
-      margin: 0;
-      padding-top: 1rem;
-      font-weight: 400;
-      font-size: 1.1rem;
-      color: var(--color-text-secondary);
+    > .illustration {
+      position: relative;
+      flex-basis: 44px;
+      margin-left: 1rem;
 
-      &::first-letter {
-        text-transform: uppercase;
+      > .icon {
+        position: absolute;
+        left: 50%;
+        top: -10px;
+        transform: translateX(-50%) scale(0.7);
       }
     }
   }
@@ -47,12 +68,6 @@
     padding: 4rem 1rem 0;
     display: flex;
     justify-content: space-between;
-    max-width: 19rem;
-
-    @include above(m) {
-      margin: 0 auto;
-      width: 100%;
-    }
 
     > .info > .label {
       display: block;

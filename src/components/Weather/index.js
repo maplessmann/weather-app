@@ -44,8 +44,17 @@ const Weather = () => {
   return (
     <div className="weather-display">
       <header className="header">
-        <h1 className="city">{weather?.name}</h1>
-        <h2 className="description">{weather?.weather?.[0]?.description}</h2>
+        <div className="location">
+          <h1 className="city">{weather?.name}</h1>
+          <h2 className="description">{weather?.weather?.[0]?.description}</h2>
+        </div>
+        <div className="illustration">
+          <img
+            className="icon"
+            src={`http://openweathermap.org/img/wn/${weather?.weather?.[0]?.icon}@2x.png`}
+            alt="Current weather icon"
+          />
+        </div>
       </header>
       <Temperature weather={weather} />
       <Additional weather={weather} />
