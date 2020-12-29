@@ -1,4 +1,5 @@
 import Button from 'components/Button'
+import SplashScreen from 'components/SplashScreen'
 import useWeather from 'hooks/useWeather'
 
 import './Weather.scss'
@@ -37,6 +38,8 @@ const Additional = ({ weather }) => (
 
 const Weather = () => {
   const { weather, onUpdateData } = useWeather()
+
+  if (!weather) return <SplashScreen />
 
   return (
     <div className="weather-display">
