@@ -9,6 +9,22 @@ const formatter = {
   wind: val => `${~~Math.round(val * 3.6)} km/h`,
 }
 
+const Header = ({ weather }) => (
+  <header className="header">
+    <div className="location">
+      <h1 className="city">{weather?.name}</h1>
+      <h2 className="description">{weather?.weather?.[0]?.description}</h2>
+    </div>
+    <div className="illustration">
+      <img
+        className="icon"
+        src={`http://openweathermap.org/img/wn/${weather?.weather?.[0]?.icon}@2x.png`}
+        alt="Current weather icon"
+      />
+    </div>
+  </header>
+)
+
 const Temperature = ({ weather }) => (
   <div className="temperature-info">
     <strong className="value">{formatter.temp(weather?.main?.temp)}</strong>
@@ -43,19 +59,7 @@ const Weather = () => {
 
   return (
     <div className="weather-display">
-      <header className="header">
-        <div className="location">
-          <h1 className="city">{weather?.name}</h1>
-          <h2 className="description">{weather?.weather?.[0]?.description}</h2>
-        </div>
-        <div className="illustration">
-          <img
-            className="icon"
-            src={`http://openweathermap.org/img/wn/${weather?.weather?.[0]?.icon}@2x.png`}
-            alt="Current weather icon"
-          />
-        </div>
-      </header>
+      <Header weather={weather} />
       <Temperature weather={weather} />
       <Additional weather={weather} />
       <Button onClick={onUpdateData}>Update data</Button>
