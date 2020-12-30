@@ -9,7 +9,7 @@ const getWeather = ({ coords }) => {
         lat: latitude.toFixed(2),
         lon: longitude.toFixed(2),
         units: 'metric',
-        appid: '43d5a39c03e371b05715c48d4d8c01c4',
+        appid: process.env.API_KEY,
       },
     })
     .then(({ data }) => data)
