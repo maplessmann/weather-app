@@ -43,7 +43,9 @@ const Additional = ({ weather }) => (
     </div>
     <div className="info">
       <span className="label">Humidity</span>
-      <span className="value">{weather?.main?.humidity}%</span>
+      <span className="value">
+        {formatter.percent(weather?.main?.humidity)}
+      </span>
     </div>
   </div>
 )
