@@ -13,8 +13,8 @@ const gatsbySourceFilesystem = {
 const gatsbyPluginManifest = {
   resolve: `gatsby-plugin-manifest`,
   options: {
-    name: `gatsby-boilerplate`,
-    short_name: `Gatsby Boilerplate`,
+    name: `Weather App`,
+    short_name: `Weather App`,
     start_url: `/`,
     background_color: `#663399`,
     theme_color: `#663399`,
