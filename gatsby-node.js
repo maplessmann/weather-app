@@ -6,6 +6,9 @@ exports.onCreateWebpackConfig = ({ actions, plugins }) => {
       plugins.provide({
         React: 'react',
       }),
+      plugins.define({
+        'process.env.API_KEY': JSON.stringify(process.env.API_KEY),
+      }),
     ],
 
     resolve: {
