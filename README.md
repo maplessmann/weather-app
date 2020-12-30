@@ -1,5 +1,9 @@
 # ☁️ Weather App
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d6761b22-5ab8-4017-9962-6d98be52aae2/deploy-status)](https://dropweather.netlify.app/)
+
+This application was deployed using [Netlify](https://www.netlify.com/). You can [access it here](https://dropweather.netlify.app/).
+
 ## Getting Started
 
 Clone this repository
