@@ -1,6 +1,12 @@
-# Weather App
+# ☁️ Weather App
 
 ## Getting Started
+
+Clone this repository
+
+```bash
+git clone git@github.com:maplessmann/weather-app.git
+```
 
 Install dependencies
 
@@ -16,10 +22,8 @@ npm run start
 
 Open the local server at `localhost:8000`
 
-### Build
+## Stack
 
-If you want to simulate the production environment and see the generated bundles, you can run the `build` script.
-
-```shell
-npm run build && npm run serve
-```
+- [React](https://reactjs.org/)
+- [Gatsby](https://www.gatsbyjs.com/)
+- [Sass](https://sass-lang.com/)
